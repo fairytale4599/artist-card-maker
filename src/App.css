@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #191414;
+  min-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.logo-spot {
+  color: #1DB954;
+}
+
+.artist-input {
+  background-color: #1f1f1f;
+  border: 0;
+  color: whitesmoke;
+  width: 590px;
+  height: 50px;
+  border-radius: 35px;
+  padding-left: 30px;
+  transition: all 0.5s;
+  font-size: 25px;
+}
+
+.artist-input:focus {
+  border: white 50px;
+  background-color: #303030;
+}
+
+.artist-input:hover {
+  background-color: #303030;
+}
+
+.App-footer {
+  background-color: #191414;
+  color: gray;
+  padding-bottom: 150px;
+}
+
+.form-artist {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 13vh;
+}
+
+.artist-button {
+  background-color: #10bb5b;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  min-height: 5vh;
+  width: 30vh;
+  transition: all 0.5s;
+}
+
+.artist-button:hover {
+  background-color: #181818;
+  border: 1px solid white;
+}
