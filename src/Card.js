@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import qs from 'qs';
 import './Card.css';
@@ -88,12 +88,14 @@ const Card = () => {
             const responseTracks = await axios.get(`https://api.spotify.com/v1/artists/${artistID}/top-tracks`, {
                 headers: { 'Authorization': `Bearer ${token}` },
             });
-            console.log(responseTracks)
             const topTracks = responseTracks.data.tracks || [];
             if (topTracks.length > 0) {
-                const topFiveTracks = topTracks.slice(0, 5);
+                const topFiveTracks = topTracks.slice(0, 3);
                 tracksListID.innerHTML = topFiveTracks
-                    .map((track) => `<li>${track.name}</li>`)
+                    .map((track) => `<li>
+                                                    <img src="${track.album.images[0].url}" alt="Track image"/>
+                                                    <p>${track.name}</p>
+                                               </li>`)
                     .join('');
             } else {
                 tracksListID.innerHTML = `<li>No tracks available</li>`;
@@ -104,6 +106,16 @@ const Card = () => {
             console.error('Error fetching artist info:', error);
         }
     };
+
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        try {
+            navigate("/");
+        } catch (e) {
+            console.error(e);
+        }
+    }
 
     useEffect(() => {
         const initializeCard = async () => {
@@ -130,7 +142,9 @@ const Card = () => {
                 </div>
                 <p className="card-header">Top tracks:</p>
                 <ul id="tracksList" className="tracks-list"></ul>
+                <h3><span className="logo-spot">Spotify®</span> Card Maker</h3>
             </div>
+            <button className="return-button" onClick={handleSubmit}>Exit</button>
         </div>
     );
 };

@@ -24,7 +24,7 @@
     align-items: center;
 
     background-color: #303030;
-    box-shadow: 1px 5px 5px whitesmoke;
+    box-shadow: 1px 5px 5px black;
 
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out forwards;
@@ -36,8 +36,8 @@
 }
 
 .artist-img {
-    max-height: 300px;
-    max-width: 300px;
+    height: 300px;
+    width: 300px;
     border-radius: 30px;
     margin-top: 3vh;
 }
@@ -85,4 +85,52 @@ li:first-letter {
     margin: 0;
     font-family: "Spotify Mix", sans-serif;
     color: whitesmoke;
+    height: 20%;
+    display: flex;
+
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.tracks-list img {
+    max-height: 40px; max-width: 40px;
+    border-radius: 10px;
+}
+
+.tracks-list li {
+    display: flex;
+    align-content: center;
+}
+
+.tracks-list li p {
+    margin-left: 10px;
+}
+
+.logo-spot {
+    color: #1DB954;
+}
+
+h3 {
+    font-family: "Spotify Mix", sans-serif;
+    color: whitesmoke;
+}
+
+.return-button {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    margin-left: 85%;
+    margin-top: 45%;
+    transition: all 0.5s;
+    font-size: 25px;
+    font-family: "Spotify Mix", sans-serif;
+    background-color: #10bb5b;
+    color: whitesmoke;
+    border: 0;
+    border-radius: 35px;
+}
+
+.return-button:hover {
+    background-color: #181818;
+    border: 1px solid white;
 }
