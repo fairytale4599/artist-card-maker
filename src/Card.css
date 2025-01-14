@@ -15,7 +15,7 @@
 
 .card {
     margin-top: 3vh;
-    max-height: 90vh;
+    max-height: 95vh;
     width: 50vh;
     border-radius: 20px;
     display: flex;
@@ -86,7 +86,7 @@ li:first-letter {
     margin: 0;
     font-family: "Spotify Mix", sans-serif;
     color: whitesmoke;
-    height: 20%;
+    height: 27%;
     display: flex;
 
     flex-wrap: wrap;
@@ -94,7 +94,7 @@ li:first-letter {
 }
 
 .tracks-list img {
-    max-height: 40px; max-width: 40px;
+    max-height: 50px; max-width: 50px;
     border-radius: 10px;
 }
 
@@ -105,6 +105,14 @@ li:first-letter {
 
 .tracks-list li p {
     margin-left: 10px;
+}
+
+.tracks-list li div p {
+    margin: 0 0 0 10px;
+}
+
+.tracks-list li div p:last-child {
+    margin-bottom: 30px;
 }
 
 .logo-spot {

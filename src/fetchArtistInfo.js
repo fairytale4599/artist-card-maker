@@ -27,7 +27,7 @@ export const fetchArtistInfo = async (artistName) => {
         const artistNameReal = response.data.name;
         const genres = response.data.genres || [];
 
-        totalFolID.textContent = `${totalFollowers}`;
+        totalFolID.textContent = `${totalFollowers.toLocaleString(["ban", "id"])}`;
         artistNameID.textContent = artistNameReal;
         artistImageID.src = artistImageURL;
 
@@ -49,7 +49,10 @@ export const fetchArtistInfo = async (artistName) => {
             tracksListID.innerHTML = topFiveTracks
                 .map((track) => `<li>
                                                     <img src="${track.album.images[0].url}" alt="Track image"/>
-                                                    <p>${track.name}</p>
+                                                    <div>
+                                                        <p>${track.name}</p>
+                                                        <p>${track.artists[0].name}</p>
+                                                    </div>     
                                                </li>`)
                 .join('');
         } else {
