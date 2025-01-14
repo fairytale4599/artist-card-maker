@@ -143,3 +143,46 @@ h3 {
     background-color: #181818;
     border: 1px solid white;
 }
+
+/*iPhone 12 and higher*/
+@media screen and (min-width: 1170px) and (min-height: 2532px) {
+    .card {
+        width: 40vh;
+        max-height: 85vh;
+    }
+
+    .artist-img {
+        height: 25vh;
+        width: 25vh;
+    }
+
+    .artist-name {
+        font-size: 6rem;
+    }
+
+    .card-header, .card-par, .genres-list li, h3 {
+        font-size: 2.5rem;
+    }
+
+    .tracks-list li p {
+        margin-left: 10px;
+        font-size: 2.5rem;
+    }
+
+    .tracks-list img {
+        max-width: 3vh;
+        max-height: 3vh;
+    }
+
+    .tracks-list li div p:last-child {
+        margin-bottom: 3vh;
+    }
+
+    .return-button {
+        margin: 90vh 0 0 0;
+        width: 20vh;
+        height: 5vh;
+        font-size: 3rem;
+        font-weight: bold;
+    }
+}
